@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Chemistry Coding membantu dalam membuat website responsif">
+		<meta name="keywords" content="Chemistry Coding, Kursus coding, web design, revou, fcse mini project">
+		
+		<title>Home | Chemistry Coding</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="icon" href="./assets/favicon.png" type="image/png">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<nav class="navbar">
+					<div class="logo">
+						<img src="./assets/logo 2.png" alt="Chemistry Coding logo" />
+					</div>
+					<button class="menu-button" id="menu-button" onclick="toggleMenuButton()">
+						<i data-feather="menu"></i>
+					</button>
+					<ul class="navigation-list" id="menu-list">
+						<li><a href="#hero" onclick="setTitle(this)">Rumah</a></li>
+						<li><a href="#our-package" onclick="setTitle(this)">Fasilitas</a></li>
+						<li><a href="#call-us" onclick="setTitle(this)">Kontak Kami</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="main-content">
+			<div class="hero" id="hero">
+				<div class="hero-slider" id="hero-slider">
+					<img id="slide1" src="./assets/images/banner1.jpg" alt="" />
+					<img id="slide2" src="./assets/images/banner2.jpeg" alt="" />
+					<img id="slide3" src="./assets/images/banner3.jpeg" alt="" />
+					<img id="slide4" src="./assets/images/banner4.jpeg" alt="" />
+					<img id="slide5" src="./assets/images/banner5.jpeg" alt="" />
+					<img id="slide6" src="./assets/images/banner6.jpg" alt="" />
+					<img id="slide7" src="./assets/images/banner1.jpg" alt="" />
+					<img id="slide8" src="./assets/images/banner2.jepg" alt="" />
+				</div>
+				<div class="hero-wrapper">
+					<h1 class="main-title">Kursus Web Design</h1>
+					<p class="hero-description">Training membuat website responsif</p>
+					<button class="button" onclick="getStartButton()">Mulai!</button>
+				</div>
+			</div>
+			<div class="container">
+				<div class="about-contact" id="about">
+					<div class="about">
+						<img src="./assets/images/promotional.jpg" alt="A beach in Bali during dusk, with some peoples playing" class="about-img" />
+						<p class="about-caption">Pada kursus ini, Anda akan mempelajari dasar dari website mulai dari HTML, CSS, dan Javascript.</p>
+						<div class="about-author">
+							<img src="./assets/images/avatar.jpg" alt="" class="author-img" />
+							<div class="author-data">
+								<div class="author-name">Budiono Siregar (Kapal Lawt)</div>
+								<div class="author-info">Nahkoda dari Chemistry Coding</div>
+							</div>
+						</div>
+						<hr class="border" />
+						<div class="feature">
+							<h2 class="subsection-title">Fasilitas yang didapatkan ketika mengikuti kelas Chemistry Coding:</h2>
+							<div class="feature-list">
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">Modul</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">T-Shirt</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">Ruang Ber-AC</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">Snack dan makanan</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">Akses Internet</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-icon">
+										<i data-feather="globe"></i>
+									</div>
+									<div class="feature-description">Sertifikat</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contact">
+						<h2 class="subsection-title">Kontak Kami</h2>
+						<p>Kami Akan mengirimkan e-mail setelah Anda mendaftarkan akun Anda</p>
+						<form class="contact-form" name="contact-form" onsubmit="return validateForm()">
+							<div class="form-field">
+								<label for="name" class="input-label">Nama:</label>
+								<input type="text" id="name" name="name" class="input-field" placeholder="Nama Lengkap" oninput="fillInput('name')" />
+								<p class="error-msg" id="name-error">Silahkan Masukkan nama kamu</p>
+							</div>
+							<div class="form-field">
+								<label for="email" class="input-label">Alamat Email:</label>
+								<input type="text" id="email" name="email" class="input-field" placeholder="contoh@email.com" oninput="fillInput('email')" />
+								<p class="error-msg" id="email-error">Silahkan Masukkan email kamu dengan format yang sesuai</p>
+							</div>
+							<div class="form-field">
+								<label for="interest" class="input-label">Apa yang kamu ingin pelajari?</label>
+								<select id="interest" name="interest" class="input-field" oninput="selectInterest()">
+									<option value="none" selected disabled>Pilihan</option>
+									<option value="option 1">Bahasa HTML</option>
+									<option value="option 2">Bahasa CSS</option>
+									<option value="option 3">Bahasa JavaScript</option>
+								</select>
+								<p class="error-msg" id="interest-error">Pilihlah yang ingin dipelajari</p>
+							</div>
+							<button type="submit" class="button">Kirim</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="package" id="our-package">
+				<div class="package-banner">
+					<div class="container">
+						<h2 class="section-title">Jenis Pelajaran</h2>
+					</div>
+				</div>
+				<div class="container">
+					<div class="package-list">
+						<div class="package-item">
+							<div class="package-icon">
+								<i data-feather="compass"></i>
+							</div>
+							<div class="package-content">
+								<h3>HTML</h3>
+								<p>Pengenalan HTML, Tipografi dasar, Button, Button group,Navbar,List, dan Form</p>
+							</div>
+						</div>
+						<div class="package-item">
+							<div class="package-icon">
+								<i data-feather="compass"></i>
+							</div>
+							<div class="package-content">
+								<h3>CSS</h3>
+								<p>Pengenalan CSS, Tipografi dasar, Button Style, Button group Style,Navbar Style,List Style, dan Form Style</p>
+							</div>
+						</div>
+						<div class="package-item">
+							<div class="package-icon">
+								<i data-feather="compass"></i>
+							</div>
+							<div class="package-content">
+								<h3>JavaScript</h3>
+								<p>Pengenalan JavaScript, Alert, Progress Bar, Table, Modal, Carousel, Tooltip, dan JQuery</p>
+							</div>
+						</div>
+					</div>
+			<div class="cta" id="call-us">
+				<div class="container">
+					<h2 class="section-title">Hubungi Kami</h2>
+					<p>Silahkan hubungi kami jika ada yang ingin ditanyakan, melakukan pemesanan kelas, dan jika terdapat kendala yang ingin dibantu.</p>
+					<button class="button">Hubungi Kami</button>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="logo">
+					<img src="./assets/logo 1.png" alt="Chemistry Coding logo" width="192" />
+				</div>
+				<ul class="footer-navigation">
+					<li><a href="#">Terms of Service</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+				<div>© 2024 KAPAL LAUWD</div>
+			</div>
+		</footer>
+
+		<script>
+			feather.replace();
+		</script>
+		<script src="./js/validation.js"></script>
+		<script src="./js/script.js"></script>
+		<script src="./js/slideShow.js"></script>
+	</body>
+</html>
